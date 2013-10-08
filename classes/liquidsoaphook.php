@@ -30,21 +30,6 @@ class LiquidsoapHook {
 
     }
 
-    public static function reload_playlists() {
-
-        // create a new curl resource
-        $curl = curl_init();
-        // set url & port
-        curl_setopt($curl, CURLOPT_URL, self::get_url('reload_playlists'));
-        // return as a string
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-        // tell liquidsoap to refresh
-        curl_exec($curl);
-        // close curl resource to free up system resources
-        curl_close($curl);
-
-    }
-
     public static function enable_input($input, $enabled) {
 
         // create a new curl resource
